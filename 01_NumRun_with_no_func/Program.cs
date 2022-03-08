@@ -27,6 +27,25 @@ namespace _NumRun_with_no_func
                 ++runC;
                 ++runD;
 
+                int rndNum = rnd.Next(0, 4); // 0 ~ 3
+                int rndRndNum = rnd.Next(0, 2); // 0 ~ 1
+
+                switch (rndNum)
+                {
+                    case 0:
+                        runA += rndRndNum; // 좀 더 리얼함을 위함이다
+                        break;
+                    case 1:
+                        runB += rndRndNum;
+                        break;
+                    case 2:
+                        runC += rndRndNum;
+                        break;
+                    case 3:
+                        runD += rndRndNum;
+                        break;
+                }
+
                 Console.WriteLine(LINE);
 
                 for (int i = 0; i < runA; i++)
