@@ -8,7 +8,9 @@ namespace _NumRun_with_no_func
         public static void Main(string[] args)
         {
             Random rnd = new Random();
-            const string LINE = "----------------------------------";
+            const string LINE = "------------------------------------------";
+            const int END_LINE = 42;
+            const int DELAY_TIME = 200;
 
             int runA = 0;
             int runB = 0;
@@ -17,7 +19,7 @@ namespace _NumRun_with_no_func
 
             while (true)
             {
-                Thread.Sleep(1000); // 딜레이 (1000 = 1초)
+                Thread.Sleep(DELAY_TIME); // 딜레이 (1000 = 1초)
                 Console.Clear(); // 화면 지우기
 
                 ++runA;
@@ -52,6 +54,44 @@ namespace _NumRun_with_no_func
                 Console.WriteLine("4");
 
                 Console.WriteLine(LINE);
+
+                if (runA >= END_LINE || runB >= END_LINE || runC >= END_LINE || runD >= END_LINE)
+                {
+                    int runNum = 0;
+                    string strResult = "결과 : !!{0}번 선수 우승!!";
+
+                    if (runA >= END_LINE)
+                    {
+                        runNum = 1;
+                    }
+                    else if (runB >= END_LINE)
+                    {
+                        runNum = 2;
+                    }
+                    else if (runC >= END_LINE)
+                    {
+                        runNum = 3;
+                    }
+                    else
+                    {
+                        runNum = 4;
+                    }
+
+                    Console.WriteLine(strResult, runNum);
+
+                    Console.Write("다시하려면 0번 입력 :");
+                    if (int.Parse(Console.ReadLine()) == 0)
+                    {
+                        runA = 0;
+                        runB = 0;
+                        runC = 0;
+                        runD = 0;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             }
         }
     }
