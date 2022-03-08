@@ -8,7 +8,7 @@ namespace _NumRun_with_no_func
         public static void Main(string[] args)
         {
             Random rnd = new Random();
-            const string LINE = "------------------------------------------";
+            const string LINE = "--------------------------------------------";
             const int END_LINE = 42;
             const int DELAY_TIME = 200;
 
@@ -52,25 +52,49 @@ namespace _NumRun_with_no_func
                 {
                     Console.Write(" ");
                 }
-                Console.WriteLine("1");
+                Console.Write("1");
+
+                for (int i = END_LINE - runA; i > 0; i--)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine("|");
 
                 for (int i = 0; i < runB; i++)
                 {
                     Console.Write(" ");
                 }
-                Console.WriteLine("2");
+                Console.Write("2");
+
+                for (int i = END_LINE - runB; i > 0; i--)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine("|");
 
                 for (int i = 0; i < runC; i++)
                 {
                     Console.Write(" ");
                 }
-                Console.WriteLine("3");
+                Console.Write("3");
+
+                for (int i = END_LINE - runC; i > 0; i--)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine("|");
 
                 for (int i = 0; i < runD; i++)
                 {
                     Console.Write(" ");
                 }
-                Console.WriteLine("4");
+                Console.Write("4");
+
+                for (int i = END_LINE - runD; i > 0; i--)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine("|");
 
                 Console.WriteLine(LINE);
 
